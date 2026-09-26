@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Surveillance IDS — IoT Intrusion Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ Surveillance Intrusion Detection System</h1>
+            <p class="subtitle">Hybrid Deep Learning + Ensemble Learning</p>
+        </header>
+
+        <main>
+            <section class="panel">
+                <h2>1. Load Model</h2>
+                <button id="loadModel">Load ONNX Model</button>
+                <p id="modelStatus">Model not loaded</p>
+            </section>
+
+            <section class="panel">
+                <h2>2. Input Data</h2>
+                <p>Upload a CSV with one network flow (115 features).</p>
+                <input type="file" id="csvInput" accept=".csv">
+                <button id="loadSample">Load Sample Benign</button>
+                <button id="loadAttack">Load Sample Attack</button>
+                <p id="inputStatus">No input loaded</p>
+            </section>
+
+            <section class="panel">
+                <h2>3. Detection Result</h2>
+                <button id="predict" disabled>Run Detection</button>
+                <div id="result">
+                    <p class="placeholder">Load model and input to run detection.</p>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Performance</h2>
+                <p>Inference time: <span id="inferenceTime">—</span></p>
+                <p>Throughput: <span id="throughput">—</span></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Durban University of Technology — Group 20 — 2026</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.0/dist/ort.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
