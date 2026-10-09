@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Surveillance IDS — IoT Intrusion Detection</title>
+    <title>SEB-IDS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🛡️ Surveillance Intrusion Detection System</h1>
-            <p class="subtitle">Hybrid Deep Learning + Ensemble Learning</p>
+            <h1>🛡️Stacked Ensemble Botnet Intrusion Detection System</h1>
+            <p class="subtitle">Stacked Ensemble Learning</p>
         </header>
 
         <main>
@@ -41,6 +41,13 @@
                 <p>Inference time: <span id="inferenceTime">—</span></p>
                 <p>Throughput: <span id="throughput">—</span></p>
             </section>
+            <section class="panel">
+    <h2>Live Stream Simulation</h2>
+    <button id="startStream">▶ Start Stream</button>
+    <button id="stopStream" disabled>⏹ Stop Stream</button>
+    <div id="streamLog" style="max-height: 200px; overflow-y: auto; margin-top: 12px; font-family: monospace;"></div>
+    <p id="streamStats">—</p>
+</section>
         </main>
 
         <footer>

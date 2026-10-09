@@ -23,7 +23,7 @@ print(f"Saved attack sample from index {attack_idx}")
 
 # Also save 10 random samples as CSV for testing
 rows = []
-for i in range(10):
+for i in range(100):
     rows.append(",".join(str(v) for v in X_test[i]))
 
 with open(f"{WEB_DIR}/sample_batch.csv", "w") as f:
