@@ -1,5 +1,5 @@
 // Config
-const MODEL_PATH = 'models/stacked_ensemble.onnx';
+const MODEL_PATH = '../models/stacked_ensemble.onnx';
 const N_FEATURES = 115;
 
 let session = null;
