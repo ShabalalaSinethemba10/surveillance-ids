@@ -2,7 +2,6 @@
 # Data files (too large for GitHub)
 # ============================================
 data/
-*.csv
 *.npy
 
 # ============================================
@@ -14,13 +13,29 @@ data/
 *.pt
 
 # ============================================
-# But INCLUDE these specific files
+# But INCLUDE the trained models needed for the demo
 # ============================================
 !models/stacked_ensemble.onnx
 !models/stacked_ensemble.pkl
 !models/scaler.pkl
 !models/cnn_bilstm_best.pth
 !models/cnn_gru_best.pth
+
+# ============================================
+# INCLUDE the web dashboard model and samples
+# ============================================
+!web/models/stacked_ensemble.onnx
+!web/samples/benign.json
+!web/samples/attack.json
+!web/samples/sample_batch.csv
+
+# ============================================
+# Exclude regenerable heavy artifacts only
+# ============================================
+web/models/*.data
+web/samples/*.npy
+data/raw/
+data/processed/
 
 # ============================================
 # Virtual environment
@@ -64,13 +79,13 @@ results/*.json
 !results/.gitkeep
 
 # ============================================
-# Web samples (regenerable)
-# ============================================
-web/samples/
-web/models/
-
-# ============================================
 # Logs
 # ============================================
 *.log
 training_log.txt
+
+# ============================================
+# CSV files — allow the demo sample, exclude the rest
+# ============================================
+*.csv
+!web/samples/sample_batch.csv
